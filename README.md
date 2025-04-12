@@ -60,16 +60,34 @@ Welcome to **HarpTronics** — a light-sensing, touchless laser harp designed an
 
 ---
 
-### 🛠️ Hardware Setup
+## 🧰 Full System Setup
 
-| Basys 3 Connected        | Seven-Segment Active     | VGA + Laser Harp Demo   |
-|--------------------------|--------------------------|--------------------------|
-| ![Setup 1](images/setup1.jpg) | ![Setup 2](images/setup2.jpg) | ![Demo 1](images/demo1.jpg) |
+This image shows the complete hardware setup used for HarpTronics:
 
-**More Demo Shots:**
+- VGA-connected monitor for note display  
+- Speaker + amplifier for sound output  
+- LDR sensor modules and lasers for beam interruption  
+- Basys 3 FPGA board controlling all logic
 
-![Demo 2](images/demo2.jpg)  
-![Demo 3](images/demo3.jpg)
+![Full Hardware Setup](images/full-setup.png)
+
+---
+
+## 🛠️ Hardware Outputs
+
+### 🔢 Seven-Segment Display States
+
+| Output: 0294            | Output: 0523            |
+|-------------------------|-------------------------|
+| ![0294](images/seven-segment-0294.jpg) | ![0523](images/seven-segment-0523.jpg) |
+
+---
+
+### 📺 VGA Note Detection
+
+| Note "C"               | Note "D"               |
+|------------------------|------------------------|
+| ![Note C](images/vga-note-c.jpg) | ![Note D](images/vga-note-d.jpg) |
 
 ---
 
@@ -88,20 +106,35 @@ Below is a visual representation of horizontal timing, including:
 
 ## 🎵 Musical Note Frequencies and Wavelengths
 
-This project visually displays musical notes (e.g., C, D, E...) detected via beam interruptions. Each note corresponds to a specific frequency and wavelength:
+This extended table shows the frequencies and corresponding wavelengths of the musical notes detected and displayed by the system:
 
-| Note | Frequency (Hz) | Wavelength (nm) |
-|------|----------------|-----------------|
-| C4   | 261.63         | 1312.5          |
-| D4   | 293.66         | 1167.0          |
-| E4   | 329.63         | 1040.3          |
-| F4   | 349.23         | 981.4           |
-| G4   | 392.00         | 874.7           |
-| A4   | 440.00         | 780.0           |
-| B4   | 493.88         | 695.6           |
-| C5   | 523.25         | 656.0           |
+| Note        | Frequency (Hz) | Wavelength (cm) |
+|-------------|----------------|-----------------|
+| A3          | 220.00         | 156.82          |
+| A#/Bb3      | 233.08         | 148.02          |
+| B3          | 246.94         | 139.71          |
+| C4          | 261.63         | 131.87          |
+| C#/Db4      | 277.18         | 124.47          |
+| D4          | 293.66         | 117.48          |
+| D#/Eb4      | 311.13         | 110.89          |
+| E4          | 329.63         | 104.66          |
+| F4          | 349.23         | 98.79           |
+| F#/Gb4      | 369.99         | 93.24           |
+| G4          | 392.00         | 88.01           |
+| G#/Ab4      | 415.30         | 83.07           |
+| A4          | 440.00         | 78.41           |
+| A#/Bb4      | 466.16         | 74.01           |
+| B4          | 493.88         | 69.85           |
+| C5          | 523.25         | 65.93           |
+| C#/Db5      | 554.37         | 62.23           |
+| D5          | 587.33         | 58.74           |
+| D#/Eb5      | 622.25         | 55.44           |
+| E5          | 659.25         | 52.33           |
+| F5          | 698.46         | 49.39           |
+| F#/Gb5      | 739.99         | 46.62           |
+| G5          | 783.99         | 44.01           |
 
-> These values are used to visualize notes on screen and help match light interruptions with pitch output.
+> These values provide the physical-musical mapping used to visualize detected notes and calculate harmonics.
 
 ---
 
